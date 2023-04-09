@@ -320,7 +320,6 @@ test = pd.read_csv("/kaggle/input/titanic/test.csv")
 
 데이터는 타이타닉호 탑승객들의 신상정보를 series로 갖는 dataframe으로 구성되어있다. 승객별로 생존여부가 모두 라벨링되어 있으므로 타이타닉 문제는 지도학습에 해당한다. 최종적으로 생존(1)과 사망(0)으로 분류하였다.
 
-
 ```python
 train.shape
 ```
@@ -454,30 +453,11 @@ chart('Pclass')
 chart('Embarked')
 chart('SibSp')
 ```
-
-
     
-![png](output_16_0.png)
-    
-
-
-
-    
-![png](output_16_1.png)
-    
-
-
-
-    
-![png](output_16_2.png)
-    
-
-
-
-    
-![png](output_16_3.png)
-    
-
+<img src = "https://github.com/coachhknu/coachhknu.github.io/blob/master/_posts/output_16_0.png">
+<img src = "https://github.com/coachhknu/coachhknu.github.io/blob/master/_posts/output_16_1.png">
+<img src = "https://github.com/coachhknu/coachhknu.github.io/blob/master/_posts/output_16_2.png">
+<img src = "https://github.com/coachhknu/coachhknu.github.io/blob/master/_posts/output_16_3.png">
 
 일단 성별, 사회적 지위, 탑승지역, 타이타닉에 탑승한 형제,자매 수를 시각화 하였다. 그 결과 여성보다 남성이 더 많이 생존했고, 지위가 높거나 가족이 있는 승객이 더 높은 생존율을 보이고 있다.
 
@@ -635,7 +615,7 @@ chart('Alone')
 
 
     
-![png](output_23_0.png)
+<img src = "https://github.com/coachhknu/coachhknu.github.io/blob/master/_posts/output_23_0.png">
     
 
 
@@ -796,7 +776,7 @@ df.plot(kind="bar", figsize=(10,5))
 
 
     
-![png](output_26_1.png)
+<img src = "https://github.com/coachhknu/coachhknu.github.io/blob/master/_posts/output_26_1.png">
     
 
 
