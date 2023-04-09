@@ -454,10 +454,10 @@ chart('Embarked')
 chart('SibSp')
 ```
     
-<img src = "https://github.com/coachhknu/coachhknu.github.io/blob/master/_posts/output_16_0.png">
-<img src = "https://github.com/coachhknu/coachhknu.github.io/blob/master/_posts/output_16_1.png">
-<img src = "https://github.com/coachhknu/coachhknu.github.io/blob/master/_posts/output_16_2.png">
-<img src = "https://github.com/coachhknu/coachhknu.github.io/blob/master/_posts/output_16_3.png">
+<img src = "https://raw.githubusercontent.com/coachhknu/coachhknu.github.io/master/_posts/output_16_0.png">
+<img src = "https://raw.githubusercontent.com/coachhknu/coachhknu.github.io/master/_posts/output_16_1.png">
+<img src = "https://raw.githubusercontent.com/coachhknu/coachhknu.github.io/master/_posts/output_16_2.png">
+<img src = "https://raw.githubusercontent.com/coachhknu/coachhknu.github.io/master/_posts/output_16_3.png">
 
 일단 성별, 사회적 지위, 탑승지역, 타이타닉에 탑승한 형제,자매 수를 시각화 하였다. 그 결과 여성보다 남성이 더 많이 생존했고, 지위가 높거나 가족이 있는 승객이 더 높은 생존율을 보이고 있다.
 
@@ -615,7 +615,7 @@ chart('Alone')
 
 
     
-<img src = "https://github.com/coachhknu/coachhknu.github.io/blob/master/_posts/output_23_0.png">
+<img src = "https://raw.githubusercontent.com/coachhknu/coachhknu.github.io/master/_posts/output_23_0.png">
     
 
 
@@ -776,7 +776,7 @@ df.plot(kind="bar", figsize=(10,5))
 
 
     
-<img src = "https://github.com/coachhknu/coachhknu.github.io/blob/master/_posts/output_26_1.png">
+<img src = "https://raw.githubusercontent.com/coachhknu/coachhknu.github.io/master/_posts/output_26_1.png">
     
 
 
