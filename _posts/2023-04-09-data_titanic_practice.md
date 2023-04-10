@@ -1160,64 +1160,19 @@ train['Marry'].value_counts()
 test['Marry'].value_counts()
 ```
 
-
-    ---------------------------------------------------------------------------
-
-    KeyError                                  Traceback (most recent call last)
-
-    /opt/conda/lib/python3.7/site-packages/pandas/core/indexes/base.py in get_loc(self, key, method, tolerance)
-       3360             try:
-    -> 3361                 return self._engine.get_loc(casted_key)
-       3362             except KeyError as err:
-
-
-    /opt/conda/lib/python3.7/site-packages/pandas/_libs/index.pyx in pandas._libs.index.IndexEngine.get_loc()
-
-
-    /opt/conda/lib/python3.7/site-packages/pandas/_libs/index.pyx in pandas._libs.index.IndexEngine.get_loc()
-
-
-    pandas/_libs/hashtable_class_helper.pxi in pandas._libs.hashtable.PyObjectHashTable.get_item()
-
-
-    pandas/_libs/hashtable_class_helper.pxi in pandas._libs.hashtable.PyObjectHashTable.get_item()
-
-
-    KeyError: 'Marrye'
-
-    
-    The above exception was the direct cause of the following exception:
-
-
-    KeyError                                  Traceback (most recent call last)
-
-    /tmp/ipykernel_19/2940886444.py in <module>
-    ----> 1 test['Marrye'].value_counts()
-    
-
-    /opt/conda/lib/python3.7/site-packages/pandas/core/frame.py in __getitem__(self, key)
-       3456             if self.columns.nlevels > 1:
-       3457                 return self._getitem_multilevel(key)
-    -> 3458             indexer = self.columns.get_loc(key)
-       3459             if is_integer(indexer):
-       3460                 indexer = [indexer]
-
-
-    /opt/conda/lib/python3.7/site-packages/pandas/core/indexes/base.py in get_loc(self, key, method, tolerance)
-       3361                 return self._engine.get_loc(casted_key)
-       3362             except KeyError as err:
-    -> 3363                 raise KeyError(key) from err
-       3364 
-       3365         if is_scalar(key) and isna(key) and not self.hasnans:
-
-
-    KeyError: 'Marrye'
+    0    240
+    1     78
+    2     72
+    3     21
+    4      7
+    Name: Marry, dtype: int64
 
 
 
 ```python
 chart('Marry')
 ```
+<img src = "https://raw.githubusercontent.com/coachhknu/coachhknu.github.io/master/_posts/output_28_0.png">
 
 이후 막대 그래프를 확인해보니 mr의 사망율이 압도적으로 높았고 mrs,miss가 생존율이 높은 반면 가족이 없는 miss의 경우 상대적으로 낮은 것을 확인했다.
 
@@ -1245,6 +1200,8 @@ df.index = ['1st', '2nd', '3rd']
 df.plot(kind="bar", figsize=(10,5))
 ```
 
+<img src = "https://raw.githubusercontent.com/coachhknu/coachhknu.github.io/master/_posts/output_31_1.png">
+
 막대 그래프 확인결과 1등급의 생존율이 가장 높고 그다음 2등급, 3등급이 가장 낮았다.
 
 
@@ -1260,6 +1217,8 @@ for dataset in train_test_data:
 g = sns.FacetGrid(train, hue="Survived", aspect=4)
 g = (g.map(sns.kdeplot, "Age").add_legend())
 ```
+
+<img src = "https://raw.githubusercontent.com/coachhknu/coachhknu.github.io/master/_posts/output_33_0.png">
 
 나이대별 생존율을 비교하기 위해 선 그래프를 이용해보았다.
 
@@ -1297,6 +1256,8 @@ g = (g.map(sns.kdeplot, "Fare")
      .add_legend()
      .set(xlim=(0, train['Fare'].max()))) # x축 범위 설정
 ```
+
+<img src = "https://raw.githubusercontent.com/coachhknu/coachhknu.github.io/master/_posts/output_37_0.png">
 
 승객별로 탑승요금의 편차가 굉장히 크고 분포는 우측 꼬리가 길게 편향되어 있다. 따라서 데이터를 그룹화할때 길이가 아닌 개수를 기준으로 나눈다음 Farebin이라는 열에 저장한다.
 
