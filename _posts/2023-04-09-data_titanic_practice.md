@@ -1157,7 +1157,7 @@ train['Marry'].value_counts()
 
 
 ```python
-test['Marrye'].value_counts()
+test['Marry'].value_counts()
 ```
 
 
