@@ -1250,7 +1250,7 @@ df.plot(kind="bar", figsize=(10,5))
 
 ```python
 for dataset in train_test_data:
-    dataset['Age'].fillna(dataset.groupby("Title")["Age"].transform("median"), inplace=True)
+    dataset['Age'].fillna(dataset.groupby("marry")["Age"].transform("median"), inplace=True)
 ```
 
 나이에 대한 정보에는 누락된 값이 존재했다. 따라서 Marry에 해당하는 그룹의 가운데값을 결측치로 바꿔준다.
